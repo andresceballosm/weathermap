@@ -18,7 +18,7 @@ export default class Home extends Component {
     }
     search = async () => {
         this.setState({loading:true})
-        await fetch('http://api.openweathermap.org/data/2.5/weather?q='+ this.state.searchText+'&appid=8e3e9272ce5c1e284a47d9152ebfa833')
+        await fetch('http://api.openweathermap.org/data/2.5/weather?q='+ this.state.searchText+'&appid=YOURAPI')
             .then((response) => response.json())
             .then((responseJson) => {
                 if(responseJson['cod'] == 404){
